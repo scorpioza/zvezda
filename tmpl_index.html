@@ -1,0 +1,50 @@
+%header%
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading"><i class="far fa-star"></i> ПАК Звезда</h1>
+      <!--p class="lead">Инновационное криптографическое решение.</p-->
+      <p>
+        <a href="#" id="zvezdaShowToast" class="btn btn-primary my-2">
+          <i class="fa fa-info-circle"></i> Информация
+        </a>
+        <a href="./Ох уж этот ПАК Звезда/Ох уж этот ПАК Звезда.pptx" class="btn btn-secondary my-2"><i class="fa fa-save"></i> Скачать буклеты</a>
+
+      </p>
+
+    </div>
+
+        <div id="zvezdaToastWrapper"  aria-live="polite" aria-atomic="true" class="d-flex justify-content-center">  
+          <div class="toast" id="zvezdaToast" 
+          role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+          <div class="toast-header">
+            <strong class="me-auto">ПАК-Звезда</strong>
+            <small>MERI</small>
+            <button type="button" class="close btn-close ms-2 mb-1" data-bs-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="toast-body">
+            Здесь находится очень важная и в то же время лаконичная информация о <a href="#" class="btn btn-sm btn-warning">ПАК-Звезда</a> для тех, кто просмотрел слайды и макет, поэтому желает ознакомиться с продуктом подробнее.
+            <div style="text-align: center; margin-top: 10px; border-top: 1px solid #333;
+            padding-top: 15px;">
+              <a href="#" class="close btn btn-sm btn-primary">Не хочу знакомиться!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+  <div class="album py-5">
+    <div class="container">
+
+      <div class="row">
+        %buklets%
+      </div>
+    </div>
+  </div>
+
+</main>
+%footer%

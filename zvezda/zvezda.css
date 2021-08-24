@@ -1,0 +1,134 @@
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background: url(img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+  color:white;
+  text-shadow: 0px 0px 3px black, 0px 0px 10px black, 0px 0px 30px black, 0px 0px 40px black, 0px 0px 50px black;
+}
+
+.jumbotron .lead{
+  color: bisque;
+  text-shadow: 0px 0px 3px black, 0px 0px 10px black, 0px 0px 10px black, 0px 0px 10px black, 0px 0px 10px black;
+}
+
+.badge.bg-warning, .badge.bg-success, .badge.bg-danger, .badge.bg-info{
+  text-shadow: 0px 0px 1px black, 0px 0px 2px black;
+
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: #222325;
+    border-top: 1px solid black;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.zvezda-img-link{
+  display: block;
+  box-shadow: inset 0px 0px 10px black, inset 0px 0px 50px black;
+  overflow: hidden;
+  -webkit-border-top-left-radius: .25rem;
+  -webkit-border-top-right-radius: .25rem;
+  -moz-border-radius-topleft: .25rem;
+  -moz-border-radius-topright: .25rem;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+.zvezda-img-link img{
+  margin: -2px;
+  width: 102%;
+}
+
+#zvezda-btn-groups .btn-group{
+  margin-bottom:10px;
+}
+
+.float-right{
+  float: right;
+}
+
+.zvezda-img{
+  width:100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+}
+
+.float-left{
+  float:left;
+}
+
+#zvezda-logo{
+  height: 40px;
+  margin:-0.4rem;
+}
+
+#zvezda-buklet-title{
+  text-align: center;
+}
+#zvezda-buklet-download{
+  text-align: center;
+}
+
+#zvezdaToastWrapper{
+  height: 0px;
+}
+#zvezdaToast .toast-body{
+  background: #222;
+  margin-top: -2px;
+  position: relative;
+  z-index: 1000;
+  border: 1px solid #32383e;
+    border-top: none;
+}
+
+
+.bg-violet {
+  background-color: rgb(111, 2, 138);
+}
+.bg-blue{
+  background-color: #3249cd;
+}
+
+.btn-violet {
+  background-image: linear-gradient(rgb(130 0 162),rgb(111, 2, 138) 60%,rgb(72 4 89));
+  -webkit-filter: none;
+  filter: none;
+  color: #fff;
+}
+
+.btn-blue {
+  background-image: linear-gradient(#3a53e6 ,#3249cd 60%,#2438a8 );
+  -webkit-filter: none;
+  filter: none;
+  color: #fff;
+}
+
+#zvezda-page-cat{
+  float: right;
+}

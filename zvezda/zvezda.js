@@ -35,14 +35,13 @@
     $(".zvezda-share").click(function(){
       var zvShare = $(this).closest(".zvezda-cat").find(".zv-share")[0];
       var link = $(this).closest(".zvezda-cat").
-                    find('.zvezda-img-link').attr("href").
-                    replace("./", "https://scorpioza.github.io/zvezda/");
+                    find('.zvezda-img-link').attr("href");
       var title = "ПАК Звезда: "+
         $(this).closest(".zvezda-cat").find('.card-text').text();
 
       var cat = $(this).closest(".zvezda-cat").find('.zvezda-cat-select').text();
       var img = $(this).closest(".zvezda-cat").find('.card-img-top')
-      .attr("src").replace("./", "https://scorpioza.github.io/zvezda/");
+      .attr("src");
 
       var share = Ya.share2(zvShare, {
           content: {
@@ -52,7 +51,7 @@
             image: img       
           },
             theme: {
-              services: 'vkontakte,facebook,odnoklassniki,telegram,whatsapp,twitter,pinterest,pocket'
+              services: 'vkontakte,facebook,odnoklassniki,telegram,whatsapp,twitter,pinterest,pocket,lj'
           }/*,
           hooks: {
             onready: function () {

@@ -118,7 +118,8 @@ CATS = {
     "implant" : {"title" : "Умные импланты", "label" : "info"}
 }
 
-SITE_PATH="./"
+#SITE_PATH="./"
+SITE_PATH="https://scorpioza.github.io/zvezda/"
 FOLDER_PATH = "Ох уж этот ПАК Звезда/images/"
 FIRST_IMG = "Cell-Row-0-Col-0.png"
 FULL_PATH = "Ох уж этот ПАК Звезда/column1/"
@@ -222,6 +223,7 @@ def generatePages():
         html = html.replace(r"%title%", slide["title"])
         html = html.replace(r"%h1%", slide["title"])
         html = html.replace(r"%image%", SITE_PATH+FULL_PATH+slide["full"])
+        html = html.replace(r"%img%", SITE_PATH+FOLDER_PATH+slide["folder"]+"/"+FIRST_IMG)
         html = html.replace(r"%label%", CATS[slide["cat"]]["label"])
         html = html.replace(r"%cat%", CATS[slide["cat"]]["title"])
         html = html.replace(r"%download_link%", SITE_PATH+FOLDER_PATH+slide["folder"]+".zip")

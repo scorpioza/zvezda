@@ -141,7 +141,7 @@ def CreateFile(url, txt):
     f.close()
 	
 def getTmpl(f):
-    return open( join( abspath(os.path.curdir), SITE_DIR, "tmpl_"+f+".html" ), 
+    return open( join( abspath(os.path.curdir), SITE_DIR, "tmpl", "tmpl_"+f+".html" ), 
         encoding="utf-8" ).read()
 
 def genBuklets():
@@ -152,7 +152,7 @@ def genBuklets():
         sl=sl.replace(r"%text%", slide["title"])
         sl=sl.replace(r"%cat%", CATS[slide["cat"]]["title"])
         sl=sl.replace(r"%label%", CATS[slide["cat"]]["label"])
-        sl=sl.replace(r"%show_link%", "./"+genUrl(CATS[slide["cat"]]["title"]+"_"+slide["title"])
+        sl=sl.replace(r"%show_link%", SITE_PATH+genUrl(CATS[slide["cat"]]["title"]+"_"+slide["title"])
         +".html")
         sl=sl.replace(r"%download_link%", SITE_PATH+FOLDER_PATH+slide["folder"]+".zip")
 

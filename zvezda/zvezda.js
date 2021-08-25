@@ -31,6 +31,40 @@
       $("#zvezdaFilter").hide();
       $(".zvezda-cat").show();
     });
+
+    $(".zvezda-share").click(function(){
+      var zvShare = $(this).closest(".zvezda-cat").find(".zv-share")[0];
+      var link = $(this).closest(".zvezda-cat").
+                    find('.zvezda-img-link').attr("href").
+                    replace("./", "https://scorpioza.github.io/zvezda/");
+      var title = "ПАК Звезда: "+
+        $(this).closest(".zvezda-cat").find('.card-text').text();
+
+      var cat = $(this).closest(".zvezda-cat").find('.zvezda-cat-select').text();
+      var img = $(this).closest(".zvezda-cat").find('.card-img-top')
+      .attr("src").replace("./", "https://scorpioza.github.io/zvezda/");
+
+      var share = Ya.share2(zvShare, {
+          content: {
+            title: title,
+            description: cat,
+            url: link,
+            image: img       
+          },
+            theme: {
+              services: 'vkontakte,facebook,odnoklassniki,telegram,whatsapp,twitter,pinterest,pocket'
+          }/*,
+          hooks: {
+            onready: function () {
+                alert('блок инициализирован');
+            },
+    
+            onshare: function (name) {
+                alert('нажата кнопка' + name);
+            }
+        }*/
+      });
+    });
 })();
 
 

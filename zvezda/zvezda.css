@@ -167,3 +167,12 @@ footer p {
 .zv-share{
   padding:10px;
 }
+
+.btn-group .btn.zvezda-share{
+  -webkit-border-top-right-radius: 0.2rem !important;
+  -webkit-border-bottom-right-radius: 0.2rem !important;
+  -moz-border-radius-topright: 0.2rem !important;
+  -moz-border-radius-bottomright: 0.2rem !important;
+  border-top-right-radius: 0.2rem !important;
+  border-bottom-right-radius: 0.2rem !important;
+}

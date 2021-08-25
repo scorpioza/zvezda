@@ -18,5 +18,19 @@
     $('body').on('click','.close',function(){
       $(this).closest('.toast').toast('hide')
     })
+    $("#zvezda-btn-groups .btn-cat-group, .zvezda-cat-select").click(function(){
+      var lbl = $(this).attr("role");
+      $(".zvezda-cat").hide();      
+      $(".zvezda-cat-"+lbl).show();
+      $("#zvezdaFilter").attr("class", "card mb-3 border-"+lbl).show();
+      $("#zvezdaFilterLabel").attr("class", "badge rounded-pill bg-"+lbl).text($(this).text());
+      $('html,body').animate({scrollTop: $('#zvezdaFilter').offset().top},'fast');
+    });      
 
+    $("#zvezdaFilterClean").click(function(){
+      $("#zvezdaFilter").hide();
+      $(".zvezda-cat").show();
+    });
 })();
+
+

@@ -122,7 +122,7 @@ SITE_PATH="./"
 FOLDER_PATH = "Ох уж этот ПАК Звезда/images/"
 FIRST_IMG = "Cell-Row-0-Col-0.png"
 FULL_PATH = "Ох уж этот ПАК Звезда/column1/"
-SITE_DIR = "site"
+SITE_DIR = "zvezda"
 
 def transliterate(text):
     symbols = (u"абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
@@ -170,7 +170,21 @@ def genGroups():
                 url = "./"+genUrl(CATS[slide["cat"]]["title"]+"_"+slide["title"])+".html"
                 hlinks+='<a class="dropdown-item" href="'+url+'">'+slide['title']+'</a>'
         html+='''
-    <div class="btn-group">
+
+    <div class="btn-group btn-group-sm">
+    <button type="button" role="'''+data['label']+'''" \
+         class="btn-cat-group btn btn-sm btn-'''+data['label']+'''">'''+data['title']+'''</button>
+        <button type="button" class="btn btn-sm btn-'''+data['label']+''' dropdown-toggle" \
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop'''+data['label']+'''">
+        '''+hlinks+'''
+        </div>
+    </div>
+    '''
+
+    if 0:
+        '''
+            <div class="btn-group">
         <button type="button" class="btn btn-sm btn-'''+data['label']+''' dropdown-toggle" 
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             '''+data['title']+'''
@@ -179,8 +193,11 @@ def genGroups():
         '''+hlinks+'''
         </div>
     </div>
-    '''
+        
+        '''
+
     return html
+    
 
 def genHF(type):
     html = getTmpl(type).replace(r"%header%", getTmpl("header"))

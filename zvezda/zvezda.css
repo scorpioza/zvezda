@@ -129,6 +129,37 @@ footer p {
   color: #fff;
 }
 
+.border-violet {
+  border-color: rgb(111, 2, 138)!important;
+}
+
+.border-blue {
+  border-color: #3249cd!important;
+}
+
 #zvezda-page-cat{
   float: right;
+}
+
+#zvezdaFilter{
+  display: none;
+}
+
+@media (min-width:600px){
+  #zvezdaFilterClean{
+    float: right;
+  }
+}
+@media (max-width:600px){
+  #zvezdaFilterClean{
+    display:block;
+    margin: 10px auto 0px auto;
+  }
+}
+
+.btn-group-xs>.btn, .btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
 }

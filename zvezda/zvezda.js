@@ -48,7 +48,8 @@
             title: title,
             description: cat,
             url: link,
-            image: img       
+            image: img,
+            hashtags: 'ПАК Звезда, криптография, MERI, NIIME, НИИМЭ'  
           },
             theme: {
               services: 'vkontakte,facebook,odnoklassniki,telegram,whatsapp,twitter,pinterest,pocket,lj'

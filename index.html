@@ -21,17 +21,55 @@
     <link rel="icon" sizes="48x48" type="image/png" href="./zvezda/img/favicon-48x48.png"/>
     <meta name="msapplication-TileColor" content="#4466ae"/>
     <meta name="msapplication-TileImage" content="./zvezda/img/mstile-144x144.png"/><body>
-    <header>
-  <div class="bg-dark collapse" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">Категории</h4>
-          <p class="text-muted">Пак Звезда - Инновационное решение в области криптографии</p>
+    <header><nav class="navbar navbar-expand-lg navbar-dark  bg-dark"><div class="container-fluid container"><a href="https://www.niime.ru" target="_blank" class="navbar-brand d-flex align-items-center">
+        <!--i class="fab fa-jedi-order"></i>&nbsp;
+        <strong>Ниимэ</strong-->
+        <img id="zvezda-logo" src="./zvezda/img/niime.png"/>
+      </a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-
-          <div id="zvezda-btn-groups">
-            
+      <div class="navbar-collapse collapse" id="navbarColor02" style=""><ul id="zvezda-link-groups" class="navbar-nav me-auto ">
+          
+        <li class="nav-item">
+            <a class="nav-link link-cat-group link-warning" role="warning" href="javascript:void(null)">Завод</a>
+        </li>
+    
+        <li class="nav-item">
+            <a class="nav-link link-cat-group link-violet" role="violet" href="javascript:void(null)">Склад</a>
+        </li>
+    
+        <li class="nav-item">
+            <a class="nav-link link-cat-group link-success" role="success" href="javascript:void(null)">Дом</a>
+        </li>
+    
+        <li class="nav-item">
+            <a class="nav-link link-cat-group link-danger" role="danger" href="javascript:void(null)">Музей</a>
+        </li>
+    
+        <li class="nav-item">
+            <a class="nav-link link-cat-group link-light" role="light" href="javascript:void(null)">Авто</a>
+        </li>
+    
+        <li class="nav-item">
+            <a class="nav-link link-cat-group link-secondary" role="secondary" href="javascript:void(null)">Город</a>
+        </li>
+    
+        <li class="nav-item">
+            <a class="nav-link link-cat-group link-blue" role="blue" href="javascript:void(null)">Ферма</a>
+        </li>
+    
+        <li class="nav-item">
+            <a class="nav-link link-cat-group link-info" role="info" href="javascript:void(null)">Импланты</a>
+        </li>
+    
+        </ul>
+        <div class="collapsed" id="mobileNavbar">
+              <p class="text-muted">Пак Звезда - Инновационное решение в области криптографии</p>
+    
+    
+              <div id="zvezda-btn-groups">
+                
 
     <div class="btn-group btn-group-sm">
     <button type="button" role="warning"          class="btn-cat-group btn btn-sm btn-warning">Умный завод</button>
@@ -104,38 +142,12 @@
         </div>
     </div>
     
-          </div>
+              </div>
+        </div></div>
 
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Контакты</h4>
-          <ul class="list-unstyled">
-            <li><i class="fa fa-home"></i>
-                <a href="https://www.niime.ru" target="_blank">
-                    Ниимэ, ОРЗИ
-            </a></li>
-            <li><i class="fa fa-phone"></i>
-            
-                (495) 229 7484</li>
-            <li><i class="fa fa-envelope"></i>
-                <a href="mailto:orzimeri@gmail.com">
-                
-                orzimeri@gmail.com</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container d-flex justify-content-between"><a href="https://www.niime.ru" target="_blank" class="navbar-brand d-flex align-items-center">
-        <!--i class="fab fa-jedi-order"></i>&nbsp;
-        <strong>Ниимэ</strong-->
-        <img id="zvezda-logo" src="./zvezda/img/niime.png"/>
-      </a><button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
+  </nav>
+
 </header>
 <main role="main">
 
@@ -144,34 +156,15 @@
       <h1 class="jumbotron-heading"><i class="far fa-star"></i> ПАК Звезда</h1>
       <!--p class="lead">Инновационное криптографическое решение.</p-->
       <p>
-        <a href="#" id="zvezdaShowToast" class="btn btn-primary my-2">
-          <i class="fa fa-info-circle"></i> Информация
+        <a href="./zvezda-info.html" class="btn btn-primary my-2">
+          <i class="fa fa-info-circle"></i> Общая информация
         </a>
-        <a href="./Ох уж этот ПАК Звезда/Ох уж этот ПАК Звезда.pptx" class="btn btn-secondary my-2"><i class="fa fa-save"></i> Скачать буклеты</a>
-
+        <a href="./tech-info.html" class="btn btn-secondary my-2">
+          <i class="fa fa-file-word"></i> Техническая информация
+        </a>
       </p>
-
     </div>
 
-        <div id="zvezdaToastWrapper"  aria-live="polite" aria-atomic="true" class="d-flex justify-content-center">  
-          <div class="toast" id="zvezdaToast" 
-          role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
-          <div class="toast-header">
-            <strong class="me-auto">ПАК-Звезда</strong>
-            <small>MERI</small>
-            <button type="button" class="close btn-close ms-2 mb-1" data-bs-dismiss="toast" aria-label="Close">
-              <span aria-hidden="true"></span>
-            </button>
-          </div>
-          <div class="toast-body">
-            Здесь находится очень важная и в то же время лаконичная информация о <a href="#" class="btn btn-sm btn-warning">ПАК-Звезда</a> для тех, кто просмотрел слайды и макет, поэтому желает ознакомиться с продуктом подробнее.
-            <div style="text-align: center; margin-top: 10px; border-top: 1px solid #333;
-            padding-top: 15px;">
-              <a href="#" class="close btn btn-sm btn-primary">Не хочу знакомиться!</a>
-            </div>
-          </div>
-        </div>
-      </div>
 
   </section>
 
@@ -199,8 +192,8 @@
       <div class="row">
         <div class="zvezda-cat zvezda-cat-warning col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_zavod_Skud_Podmena_dannyh.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/кпп(скуд)/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_zavod_Skud_Podmena_dannyh.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/кпп(скуд)/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Скуд, Подмена данных</p>
@@ -229,8 +222,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-warning col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_zavod_Skud_Avtomatizazia.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/охрана/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_zavod_Skud_Avtomatizazia.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/охрана/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Скуд, Автоматизация</p>
@@ -259,8 +252,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-warning col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_zavod_Tehprozess_Datciki_sostoania_sredy.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/работник_года/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_zavod_Tehprozess_Datciki_sostoania_sredy.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/работник_года/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Техпроцесс, Датчики состояния среды</p>
@@ -289,8 +282,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-warning col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_zavod_Datciki_sostoania_sredy_Podmena_dannyh.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/первый_день/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_zavod_Datciki_sostoania_sredy_Podmena_dannyh.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/первый_день/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Датчики состояния среды, Подмена данных</p>
@@ -319,8 +312,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-warning col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_zavod_Signalizazia_Podmena_dannyh.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/пожар/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_zavod_Signalizazia_Podmena_dannyh.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/пожар/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Сигнализация, Подмена данных</p>
@@ -349,8 +342,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-violet col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_sklad_Elektrokar.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/погрузчик/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_sklad_Elektrokar.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/погрузчик/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Электрокар</p>
@@ -379,8 +372,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-success col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_dom_Scetciki.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/счётчики/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_dom_Scetciki.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/счётчики/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Счётчики</p>
@@ -409,8 +402,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-success col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_dom_Datciki_temperatury.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/датчики_температуры/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_dom_Datciki_temperatury.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/датчики_температуры/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Датчики температуры</p>
@@ -439,8 +432,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-success col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_dom_Kormilka_Podmena_dannyh.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/кормилка/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_dom_Kormilka_Podmena_dannyh.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/кормилка/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Кормилка, Подмена данных</p>
@@ -469,8 +462,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-success col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_dom_Polucenie_dostupa_k_ustrojstvu_DDoS.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/ддос/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_dom_Polucenie_dostupa_k_ustrojstvu_DDoS.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/ддос/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Получение доступа к устройству, DDoS</p>
@@ -499,8 +492,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-danger col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_muzej_Podmena_dannyh.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/музей/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_muzej_Podmena_dannyh.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/музей/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Подмена данных</p>
@@ -529,8 +522,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-light col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_avtomobil__Udalennoe_upravlenie_Podmena_dannyh.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/автомобиль/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_avtomobil__Udalennoe_upravlenie_Podmena_dannyh.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/автомобиль/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Удалённое управление, Подмена данных</p>
@@ -559,8 +552,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-secondary col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_gorod_Svetofor_Zelenaa_polosa_Podmena_signala.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/зеленая_полоса_плохо/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_gorod_Svetofor_Zelenaa_polosa_Podmena_signala.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/зеленая_полоса_плохо/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Светофор, Зелёная полоса, Подмена сигнала</p>
@@ -589,8 +582,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-secondary col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnyj_gorod_Svetofor_Zelenaa_polosa.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/пожарные/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnyj_gorod_Svetofor_Zelenaa_polosa.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/пожарные/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Светофор, Зелёная полоса</p>
@@ -619,8 +612,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-blue col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnaa_ferma_GPS-treking_podmena_signala.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/корова/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnaa_ferma_GPS-treking_podmena_signala.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/корова/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">GPS-трэкинг, подмена сигнала</p>
@@ -649,8 +642,8 @@
     </div>
 </div><div class="zvezda-cat zvezda-cat-info col-sm-6 col-md-4">
     <div class="card mb-4 shadow-sm column">
-        <a class="zvezda-img-link" href="https://scorpioza.github.io/zvezda/Umnye_implanty_Podmena_dannyh.html">
-        <img class="bd-placeholder-img card-img-top" src="https://scorpioza.github.io/zvezda/Ох уж этот ПАК Звезда/images/кардиостимулятор/Cell-Row-0-Col-0.png" />
+        <a class="zvezda-img-link" href="./Umnye_implanty_Podmena_dannyh.html">
+        <img class="bd-placeholder-img card-img-top" src="./Ох уж этот ПАК Звезда/images/кардиостимулятор/Cell-Row-0-Col-0.png" />
         </a>
         <div class="card-body">
         <p class="card-text">Подмена данных</p>
@@ -679,6 +672,9 @@
     </div>
 </div>
       </div>
+      <div style="text-align: center;">
+        <a href="./Ох уж этот ПАК Звезда/Ох уж этот ПАК Звезда.pptx" class="btn btn-secondary my-2"><i class="fa fa-save"></i> Скачать комиксы</a>
+      </div>
     </div>
   </div>
 
@@ -688,8 +684,24 @@
       <p class="float-right">
         <a href="#top" class="btn btn-secondary to_anchor"><i class="fa fa-arrow-up"></i> Наверх</a>
       </p>
-      <p>Узнать больше о <span class="badge rounded-pill bg-secondary">Пак Звезда</span> можно найти на сайте 
-        <a href="https://www.niime.ru" target="_blank">НИИМЭ</a> или прочтитать <a href="#">документацию</a>.</p>
+      <div id="zvezda-contacts-footer">
+        <span>Контакты:</span>
+        <ul class="list-unstyled">
+          
+          <li><i class="fa fa-home"></i>
+              <a href="https://www.niime.ru" target="_blank">
+                  Ниимэ, ОРЗИ
+          </a></li>
+          <li><i class="fa fa-phone"></i>
+          
+              (495) 229 7484</li>
+          <li><i class="fa fa-envelope"></i>
+              <a href="mailto:orzimeri@gmail.com">
+              
+              orzimeri@gmail.com</a></li>
+        </ul>
+      
+      </div>
     </div>
   </footer>
   

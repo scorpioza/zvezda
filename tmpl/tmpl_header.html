@@ -27,40 +27,16 @@
     [[page <meta property="og:image" content="%img%" /> page]]
     <body>
     <header>
-  <div class="bg-dark collapse" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">Категории</h4>
-          <p class="text-muted">Пак Звезда - Инновационное решение в области криптографии</p>
 
+      [[index    
+  <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+    index]]
+    [[page    
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-primary">
+      page]]
 
-          <div id="zvezda-btn-groups">
-            %groups%
-          </div>
+    <div class="container-fluid container">
 
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Контакты</h4>
-          <ul class="list-unstyled">
-            <li><i class="fa fa-home"></i>
-                <a href="https://www.niime.ru" target="_blank">
-                    Ниимэ, ОРЗИ
-            </a></li>
-            <li><i class="fa fa-phone"></i>
-            
-                (495) 229 7484</li>
-            <li><i class="fa fa-envelope"></i>
-                <a href="mailto:orzimeri@gmail.com">
-                
-                orzimeri@gmail.com</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container d-flex justify-content-between">
       [[index
       <a href="https://www.niime.ru" target="_blank" class="navbar-brand d-flex align-items-center">
         <!--i class="fab fa-jedi-order"></i>&nbsp;
@@ -74,9 +50,42 @@
         <strong>Пак Звезда</strong>
       </a>
       page]]
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <div class="navbar-collapse collapse" id="navbarColor02" style="">
+        [[index
+        <ul id="zvezda-link-groups" class="navbar-nav me-auto ">
+          %group_links%
+        </ul>
+        <div class="collapsed" id="mobileNavbar">
+              <p class="text-muted">Пак Звезда - Инновационное решение в области криптографии</p>
+    
+    
+              <div id="zvezda-btn-groups">
+                %groups%
+              </div>
+        </div>
+        index]]
+
+        [[page   
+        <ul class="navbar-nav me-auto" id="zvezda_page_navbar">
+          <li class="nav-item">
+            <a class="nav-link" href="./zvezda-info.html"><i class="fa fa-info-circle"></i> Общая информация</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./tech-info.html"><i class="fa fa-file-word"></i> Техническая информация</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Ох уж этот ПАК Звезда/Ох уж этот ПАК Звезда.pptx"><i class="fa fa-save"></i> Скачать комиксы</a>
+          </li>
+        </ul>
+        page]]     
+      </div>
+
     </div>
-  </div>
+  </nav>
+
 </header>

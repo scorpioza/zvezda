@@ -88,8 +88,9 @@ footer p {
   margin:-0.4rem;
 }
 
-#zvezda-buklet-title{
+#zvezda-buklet-title, #zvezda-page-title{
   text-align: center;
+  text-shadow: 1px 1px 2px black, 0 -1px 0 #ddd;
 }
 #zvezda-buklet-download{
   text-align: center;
@@ -175,4 +176,124 @@ footer p {
   -moz-border-radius-bottomright: 0.2rem !important;
   border-top-right-radius: 0.2rem !important;
   border-bottom-right-radius: 0.2rem !important;
+}
+
+
+@media (min-width: 992px){
+  #mobileNavbar {
+      display: none;
+  }
+}
+@media (max-width: 992px){
+  #zvezda-link-groups {
+      display: none;
+  }
+}
+#zvezda-link-groups{
+  margin-left: auto;
+  width:100%;
+  max-width: 820px;
+}
+
+#zvezda-link-groups .nav-link{
+  border-bottom-width:3px;
+  border-bottom-style: ridge;
+  text-align: center;
+}
+
+#zvezda-link-groups .link-warning{
+  border-bottom-color:#f89406;
+}
+
+#zvezda-link-groups .link-violet {
+  border-bottom-color: rgb(111, 2, 138);
+}
+#zvezda-link-groups .link-blue{
+  border-bottom-color: #3249cd;
+}
+
+#zvezda-link-groups .link-success{
+  border-bottom-color: #62c462;
+}
+
+
+#zvezda-link-groups .link-danger{
+  border-bottom-color: #ee5f5b;
+}
+
+
+#zvezda-link-groups .link-light{
+  border-bottom-color: #e9ecef;
+}
+
+#zvezda-link-groups .link-light{
+  border-bottom-color: #e9ecef;
+}
+
+#zvezda-link-groups .link-info{
+  border-bottom-color: #5bc0de;
+}
+
+#zvezda-link-groups .link-secondary{
+  border-bottom-color: #7a8288;
+}
+#zvezda-link-groups .nav-item{
+width: 100%;
+}
+
+#zvezda-contacts-footer ul{
+  display: flex;
+}
+#zvezda-contacts-footer ul li{
+  margin-right: 20px;
+}
+
+@media (max-width: 800px){
+  #zvezda-contacts-footer>span{
+    display: none;
+  }
+
+  #zvezda-contacts-footer ul{
+    display: block;
+  }
+}
+
+#zvezda-page-content h5{
+  margin-top: 20px;
+}
+
+#zvezda-page-content ul {list-style: none}
+#zvezda-page-content li::before {
+  content: "•"; 
+  color: rgb(255, 115, 0);
+  font-size: 20px;
+  line-height: 18px;
+  display: inline-block; 
+  width: 15px;
+  margin-left: -20px;
+}
+
+#zvezda-page-content{
+  color: #ccc;
+}
+
+#zvezda-page-content b{
+  color:white;
+}
+
+#zvezda-page-title{
+  margin-bottom:20px;
+}
+
+.zvezda_page_img_card img{
+  width:100%;
+}
+
+.zvezda_page_img_card{
+  max-width: 800px;
+  margin:0 auto;
+}
+
+#zvezda_page_navbar i{
+  margin: 0 5px;
 }

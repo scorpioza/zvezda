@@ -8,6 +8,14 @@ import os
 from os.path import join
 from os.path import abspath
 import re
+
+SITE_PATH="./"
+#SITE_PATH="https://scorpioza.github.io/zvezda/"
+FOLDER_PATH = "Ох уж этот ПАК Звезда/images/"
+FIRST_IMG = "Cell-Row-0-Col-0.png"
+FULL_PATH = "Ох уж этот ПАК Звезда/column1/"
+SITE_DIR = "zvezda"
+
 SLIDES = [
     {
         "title" : "Скуд, Подмена данных",
@@ -118,12 +126,18 @@ CATS = {
     "implant" : {"title" : "Умные импланты", "label" : "info"}
 }
 
-#SITE_PATH="./"
-SITE_PATH="https://scorpioza.github.io/zvezda/"
-FOLDER_PATH = "Ох уж этот ПАК Звезда/images/"
-FIRST_IMG = "Cell-Row-0-Col-0.png"
-FULL_PATH = "Ох уж этот ПАК Звезда/column1/"
-SITE_DIR = "zvezda"
+PAGES = [
+    {
+        "title" : "Программно-аппаратный комплекс «Звезда»",
+        "file" : "buklet",
+        "link" : "zvezda-info"
+    },
+    {
+        "title" : "ПАК «Звезда» - техническая информация",
+        "file" : "techinfo",
+        "link" : "tech-info"
+    }
+]
 
 def transliterate(text):
     symbols = (u"абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
@@ -198,28 +212,43 @@ def genGroups():
         '''
 
     return html
-    
+
+
+def genGroupLinks():
+    html=""
+    for cat, data in CATS.items():
+
+        title = data['title'].split(" ")[1].replace("мобиль", "").capitalize()
+        html+='''
+        <li class="nav-item">
+            <a class="nav-link link-cat-group link-'''+data['label']+'''" role="'''+data['label']+'''" href="javascript:void(null)">'''+title+'''</a>
+        </li>
+    '''
+    return html
+
 
 def genHF(type):
     html = getTmpl(type).replace(r"%header%", getTmpl("header"))
     html = html.replace(r"%footer%", getTmpl("footer"))
     html = html.replace(r"%groups%", genGroups())
+    html = html.replace(r"%group_links%", genGroupLinks())
 
     for ctype in ["index", "page"]:
         ht = ""
         k=1
         arr = re.split('\[\['+ctype+'|'+ctype+'\]\]', html)
         for h in arr:
-            if k or ctype==type:
+            rtype = "page" if type=="slide" else type
+            if k or ctype==rtype:
                 ht += h.strip().rstrip()
             k=1-k
 
         html = ht
     return html
 
-def generatePages():
+def generateSlides():
     for slide in SLIDES:
-        html = genHF("page")
+        html = genHF("slide")
         html = html.replace(r"%title%", slide["title"])
         html = html.replace(r"%h1%", slide["title"])
         html = html.replace(r"%image%", SITE_PATH+FULL_PATH+slide["full"])
@@ -237,6 +266,19 @@ def generateIndex():
     html = html.replace(r"%buklets%", genBuklets())
     CreateFile("index", html)
 
+def generatePages():
+    for page in PAGES:
+        html = genHF("page")
+        html = html.replace(r"%title%", page["title"])
+        html = html.replace(r"%h1%", page["title"])
+
+        content = open( join( abspath(os.path.curdir), SITE_DIR, "page", page["file"]+".html" ), 
+        encoding="utf-8" ).read()
+        html = html.replace(r"%content%", content)
+        url = genUrl(page["link"])
+        CreateFile(url, html)
+
 
 generateIndex()
+generateSlides()
 generatePages()

@@ -285,7 +285,7 @@ width: 100%;
   margin-bottom:20px;
 }
 
-.zvezda_page_img_card img{
+.zvezda_page_img_card img, .zvezda_page_img_card_right img{
   width:100%;
 }
 
@@ -296,4 +296,70 @@ width: 100%;
 
 #zvezda_page_navbar i{
   margin: 0 5px;
+}
+
+
+@media (min-width:900px){
+  .zvezda_page_img_card_right{
+    float: right;
+    width: 50%;
+    margin-left: 30px;
+  }
+}
+@media (min-width:1200px){
+  .zvezda_page_img_card_right{
+    width: 40%;
+  }
+}
+
+@media (max-width:900px){
+  .zvezda_page_img_card{
+    max-width: 800px;
+    margin:0 auto;
+  }
+}
+
+#zvezda_eb_table{
+  
+}
+
+#zvezda_eb_table td{
+  text-align: center; vertical-align: center;
+}
+
+#zvezda_eb_table img{
+  width:80%;
+}
+
+@media (min-width:600px){
+  .zvezda-info-mobile{
+    display: none;
+  }
+}
+@media (max-width:600px){
+  .zvezda-info-desktop{
+    display: none;
+  }
+}
+
+#zv-other-comics{
+  padding: 1rem 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+
+  display: inline-block;
+  margin:1rem auto;
+}
+
+#zv-other-comics a{
+  margin-left: 10px;
+}
+
+#zvezda_next_comics{
+  text-align: center;
+}
+
+#zv-share-comics{
+  text-align: center;
+  margin: 20px 0;
 }

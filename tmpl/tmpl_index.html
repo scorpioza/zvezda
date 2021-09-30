@@ -6,12 +6,27 @@
       <h1 class="jumbotron-heading"><i class="far fa-star"></i> ПАК Звезда</h1>
       <!--p class="lead">Инновационное криптографическое решение.</p-->
       <p>
-        <a href="./zvezda-info.html" class="btn btn-primary my-2">
-          <i class="fa fa-info-circle"></i> Общая информация
-        </a>
-        <a href="./tech-info.html" class="btn btn-secondary my-2">
-          <i class="fa fa-file-word"></i> Техническая информация
-        </a>
+        <div class="zvezda-info-desktop">
+
+          <a href="./zvezda-info.html" class="btn btn-primary my-2">
+            <i class="fa fa-info-circle"></i> Общая информация
+          </a>
+          <a href="./tech-info.html" class="btn btn-secondary my-2">
+            <i class="fa fa-file-word"></i> Техническая информация
+          </a>
+
+        </div>
+        <div class="zvezda-info-mobile">
+          <div class="btn-group" role="group">
+            <button id="btnZvInfoMobile" type="button" class="btn btn-primary dropdown-toggle" 
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Информация</button>
+            <div class="dropdown-menu" aria-labelledby="btnZvInfoMobile">
+              <a class="dropdown-item" href="./zvezda-info.html"><i class="fa fa-info-circle"></i> Общая информация</a>
+              <a class="dropdown-item" href="./tech-info.html"><i class="fa fa-file-word"></i> Техническая информация</a>
+              <a class="dropdown-item" href="./Ох уж этот ПАК Звезда/Ох уж этот ПАК Звезда.pptx"><i class="fa fa-save"></i> Скачать комиксы</a>
+            </div>
+          </div>
+        </div>
       </p>
     </div>
 

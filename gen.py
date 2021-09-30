@@ -10,7 +10,7 @@ from os.path import abspath
 import re
 
 SITE_PATH="./"
-#SITE_PATH="https://scorpioza.github.io/zvezda/"
+SITE_PATH="https://scorpioza.github.io/zvezda/"
 FOLDER_PATH = "Ох уж этот ПАК Звезда/images/"
 FIRST_IMG = "Cell-Row-0-Col-0.png"
 FULL_PATH = "Ох уж этот ПАК Звезда/column1/"
@@ -145,7 +145,10 @@ def transliterate(text):
     tr = {ord(a):ord(b) for a, b in zip(*symbols)}
     return text.translate(tr)
 
-def genUrl(text):
+def genUrl(num):
+    return str(num+1)
+
+def genUrlSeo(text):
     return transliterate(text).replace('(', '_').replace(')', '_').replace(' ', '_') \
     .replace(',', '').strip()
 	
@@ -162,16 +165,20 @@ def getTmpl(f):
 def genBuklets():
     tmpl = getTmpl("buklet")
     html = ""
+    num = 0
     for slide in SLIDES:
         sl=tmpl.replace(r"%img%", SITE_PATH+FOLDER_PATH+slide["folder"]+"/"+FIRST_IMG)
         sl=sl.replace(r"%text%", slide["title"])
         sl=sl.replace(r"%cat%", CATS[slide["cat"]]["title"])
         sl=sl.replace(r"%label%", CATS[slide["cat"]]["label"])
-        sl=sl.replace(r"%show_link%", SITE_PATH+genUrl(CATS[slide["cat"]]["title"]+"_"+slide["title"])
+
+        # SEO URL: genUrl(CATS[slide["cat"]]["title"]+"_"+slide["title"])
+        sl=sl.replace(r"%show_link%", SITE_PATH+genUrl(num)
         +".html")
         sl=sl.replace(r"%download_link%", SITE_PATH+FOLDER_PATH+slide["folder"]+".zip")
 
         html+=sl
+        num+=1
 
     return html
 
@@ -180,17 +187,19 @@ def genGroups():
     for cat, data in CATS.items():
 
         hlinks = ""
+        num = 0
         for slide in SLIDES:
             if slide['cat'] == cat:
-                url = "./"+genUrl(CATS[slide["cat"]]["title"]+"_"+slide["title"])+".html"
+                url = "./"+genUrl(num)+".html"
                 hlinks+='<a class="dropdown-item" href="'+url+'">'+slide['title']+'</a>'
+            num +=1
         html+='''
 
     <div class="btn-group btn-group-sm">
     <button type="button" role="'''+data['label']+'''" \
          class="btn-cat-group btn btn-sm btn-'''+data['label']+'''">'''+data['title']+'''</button>
         <button type="button" class="btn btn-sm btn-'''+data['label']+''' dropdown-toggle" \
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
         <div class="dropdown-menu" aria-labelledby="btnGroupDrop'''+data['label']+'''">
         '''+hlinks+'''
         </div>
@@ -246,7 +255,35 @@ def genHF(type):
         html = ht
     return html
 
+def getNextComics(curNum):
+    num = 0
+    curSlide = SLIDES[curNum]
+    firstSlide = None
+
+    for slide in SLIDES:
+        slide["num"] = num
+        if slide["cat"] == curSlide["cat"]:
+            if not firstSlide and num < curNum:
+                firstSlide = slide
+            elif num > curNum:
+                return slide
+        num +=1
+    
+    return firstSlide if firstSlide else None
+
+def getNextComicsTxt(curNum):
+    slide = getNextComics(curNum)
+    if not slide:
+        return ""
+    else:
+        txt = "<div id='zv-other-comics' class='bg-primary'>Посмотреть другие комиксы из категории «"+CATS[slide["cat"]]["title"]+"»"
+        url = genUrl(slide["num"])
+        txt += '<a href="'+url+'.html" class="btn btn-secondary">\
+             Следующий <i class="fa fa-arrow-right"></i></a></div>'
+        return txt
+
 def generateSlides():
+    num = 0
     for slide in SLIDES:
         html = genHF("slide")
         html = html.replace(r"%title%", slide["title"])
@@ -256,9 +293,11 @@ def generateSlides():
         html = html.replace(r"%label%", CATS[slide["cat"]]["label"])
         html = html.replace(r"%cat%", CATS[slide["cat"]]["title"])
         html = html.replace(r"%download_link%", SITE_PATH+FOLDER_PATH+slide["folder"]+".zip")
+        html = html.replace(r"%next_comics%", getNextComicsTxt(num))
 
-        url = genUrl(CATS[slide["cat"]]["title"]+"_"+slide["title"])
+        url = genUrl(num)
         CreateFile(url, html)
+        num+=1
 
 def generateIndex(): 
 
@@ -275,7 +314,7 @@ def generatePages():
         content = open( join( abspath(os.path.curdir), SITE_DIR, "page", page["file"]+".html" ), 
         encoding="utf-8" ).read()
         html = html.replace(r"%content%", content)
-        url = genUrl(page["link"])
+        url = genUrlSeo(page["link"])
         CreateFile(url, html)
 
 

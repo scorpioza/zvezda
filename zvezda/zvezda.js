@@ -59,6 +59,10 @@
     });
 
     function createYaShare(cont, link, title, cat, img){
+
+      let dir = window.location.href.substring(0, window.location.href.lastIndexOf('/'))
+      link = link.replace("./", dir+"/");
+
       var share = Ya.share2(cont, {
         content: {
           title: title,

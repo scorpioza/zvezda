@@ -9,8 +9,8 @@ from os.path import join
 from os.path import abspath
 import re
 
-# SITE_PATH="./"
-SITE_PATH="https://scorpioza.github.io/zvezda/"
+SITE_PATH="./"
+# SITE_PATH="https://scorpioza.github.io/zvezda/"
 FOLDER_PATH = "Ох уж этот ПАК Звезда/images/"
 FIRST_IMG = "Cell-Row-0-Col-0.png"
 FULL_PATH = "Ох уж этот ПАК Звезда/column1/"
